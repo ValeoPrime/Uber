@@ -1,6 +1,8 @@
 @media (max-width: 1200px)
     .nav_menu_item
             padding-right: 20px
+    .hamburger
+        display: none
     .nav_menu_link
             font-size: 13px
 
@@ -9,11 +11,10 @@
                 font-size: 11px
         .tel_num
                 font-size: 18px
-
     .sub_header
             .sub_header_logo
                     margin-top: 8px
-    
+	
     .promo
         h1
             font-size: 55px
@@ -80,7 +81,138 @@
 
     .footer_divider
         width: 230px
-        
+
+@media (max-width: 767px)
+	.nav_wrapper
+		height: 50px
+		position: relative
+	.title 
+		margin-top: 25px
+	.nav_menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		top: 0
+		left: -100%
+		width: 50%
+		height: 100vh
+		padding: 20px 15px
+		background-color: rgba(0,0,0, .8)
+		transition: 0.6s all
+		&_active 
+			left: 0
+		&_item 
+			padding-right: 0
+			border: none
+			margin: 10px 0
+		&_link 
+			font-size: 20px
+	.hamburger
+		display: block
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+		width: 26px
+		height: 12px
+		span 
+			display: block 
+			height: 2px
+			width: 100%
+			background-color: #fff 
+			margin-bottom: 2px
+			transition: 0.5s all
+		&_active 
+			span 
+				margin-bottom: -2px 
+				&:nth-child(1)
+					transform: translateY(3px) rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: translateY(3px) rotate(45deg)
+	.xs-hidden
+		display: none
+	.xs-visible 
+		display: block
+	
+	.sub_header
+		flex-wrap: nowrap
+		.sub_header_logo
+			margin-top: 35px
+
+		.tel_num 
+			display: block 
+			margin-top: 10px
+			color: #ffffff
+			font-size: 16px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+		.sub_header_btn button
+			display: block
+			
+	.promo
+		h1 
+			line-height: 45px
+
+	.causes
+		.causes_header
+			font-size: 28px
+		.causes_item
+			.causes_desc
+				width: 495px
+
+	.mobile_header
+		font-size: 32px
+	.mobile_subheader
+		width: 80%
+		margin: 0 auto
+	.mobile_item
+		width: 540px
+
+	.choice
+		img
+			width: 100%
+
+	.map_header
+		font-size: 20px
+	
+	.footer_wrapper
+		display: block
+	
+	.footer_social
+		margin: 10px auto
+		order: -2
+
+	.footer_links
+		display: block
+		width: 80%
+		order: 10
+	
+	.footer_mobile
+		display: flex
+		margin: 0 auto
+		a
+			margin-right: 10px
+
+	.footer_wrapper > div
+		margin: 0 auto
+
+	.footer_wrapper > div:nth-child(1)
+        width: 80%	
+	.footer_wrapper > div:nth-child(2)
+        width: 80%
+	.footer_wrapper > div:nth-child(3)
+        width: 80%	
+	.footer_wrapper > div:last-child
+		width: 80%
+
+@media (max-width: 575px)
+	nav 
+		height: 30px
+
         
 
 
